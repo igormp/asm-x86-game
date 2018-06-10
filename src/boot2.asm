@@ -47,7 +47,7 @@ barrinha:
         mov dl, 40
         int 10h
         mov ah, 0x0E  ; chamada
-        mov al, '■'   ; printa
+        mov al, '\'   ; printa
         int 0x10   ; chama bios
         call delay2
         mov ah, 2
@@ -56,7 +56,7 @@ barrinha:
         mov dl, 40
         int 10h
         mov ah, 0x0E  ; print function
-        mov al, '■'   ; ascii char
+        mov al, '|'   ; ascii char
         int 0x10   ; IO int
         call delay2
         mov ah, 2
@@ -65,7 +65,7 @@ barrinha:
         mov dl, 40
         int 10h
         mov ah, 0x0E  ; print function
-        mov al, '■'   ; ascii char
+        mov al, '/'   ; ascii char
         int 0x10   ; IO int
         call delay2
         dec ch      ; diminui o contador
@@ -137,4 +137,4 @@ jc ler ; caso aconteca algum erro, tenta novamente
 
 jmp 0x7E0:0x0 ; executar o setor do endereco 0x7e0:0, vai para o kernel
 
-msg db "Carregando"
+msg db "Loading..."
