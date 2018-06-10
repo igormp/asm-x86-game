@@ -2,22 +2,20 @@ bootdisk=disk.img
 blocksize=512
 disksize=100
 
-boot1=boot1
+boot1=src/boot1
 
-# preencha esses valores para rodar o segundo estágio do bootloader
-boot2=boot2
+# bootloader 2nd stage params
+boot2=src/boot2
 boot2pos= 1
 boot2size= 1
 
-# preencha esses valores para rodar o kernel
-kernel=kernel
+# kernel params
+kernel=src/kernel
 kernelpos= 3
 kernelsize= 6
 
 ASMFLAGS=-f bin
 file = $(bootdisk)
-
-# adicionem os targets do kernel e do segundo estágio para usar o make all com eles
 
 all: clean mydisk boot1 write_boot1 boot2 write_boot2 kernel write_kernel hexdump launchqemu
 
