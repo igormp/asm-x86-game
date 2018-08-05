@@ -4,7 +4,7 @@ jmp 0x0000:start
 PlayerInfoY dw 172              ;coordenada inicial y do player
 BlockInfoX dw 319               ;coordenada inicial x do bloco
 BlockInfoY dw 172               ;coordenada inicial y do bloco
-JumpH dw 0                      ;variavel para verificar altura do pulo
+JumpH dw 0                      ;variavel para verificar y do pulo
 JumpInfo dw 0                   ;variavel para verificar se pula ou nao
 BlockColor db 1
 GameOver dw 0
